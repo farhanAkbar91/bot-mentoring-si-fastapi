@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     GROQ_MODEL: str = "llama-3.1-8b-instant"
     ADMIN_ID: str  # Can be a comma-separated list of Telegram user IDs
     DATABASE_URL: str
-    WEBHOOK_HOST: str
+    WEBHOOK_HOST: Optional[str] = None
     PORT: int = 8080
     API_SYNC_KEY: str = "default_sync_key"
     GOOGLE_CREDS_JSON: Optional[str] = None
@@ -25,6 +25,7 @@ class Settings(BaseSettings):
 
     @property
     def clean_webhook_host(self) -> str:
-        return self.WEBHOOK_HOST.rstrip("/")
+        host = self.WEBHOOK_HOST or os.getenv("RENDER_EXTERNAL_URL") or ""
+        return host.rstrip("/")
 
 settings = Settings()
