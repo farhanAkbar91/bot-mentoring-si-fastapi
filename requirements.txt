@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+aiogram
+sqlalchemy
+python-dotenv
+gspread
+google-auth
+apscheduler
+psycopg2-binary
+groq
+httpx

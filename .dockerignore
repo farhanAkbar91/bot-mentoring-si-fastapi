@@ -1,0 +1,26 @@
+# Git
+.git
+.gitignore
+
+# Secrets & Environment variables
+.env
+credentials.json
+service_account.json
+
+# Local Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python Cache & Virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Documentation / Markdown
+README.md
+*.md
