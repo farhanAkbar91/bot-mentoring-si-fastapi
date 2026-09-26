@@ -5,7 +5,7 @@ from typing import List, Optional
 class Settings(BaseSettings):
     TELEGRAM_TOKEN: str
     GROQ_API_KEY: str
-    GROQ_MODEL: str = "llama-3.1-8b-instant"
+    GROQ_MODEL: str = "qwen/qwen3.8-27b"
     ADMIN_ID: str  # Can be a comma-separated list of Telegram user IDs
     DATABASE_URL: str
     WEBHOOK_HOST: Optional[str] = None
